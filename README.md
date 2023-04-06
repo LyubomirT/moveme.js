@@ -7,12 +7,12 @@ MoveMe.js is a lightweight JavaScript library for making DOM elements draggable 
 
 You can install MoveMe.js by downloading the `moveme.min.js` file from the `dist` directory and including it in your HTML file using a `<script>` tag:
 ```html
-<script src="path/to/moveme.min.js"></script>
+<script src="path/to/moveme.js"></script>
 ```
 
 Alternatively, you can use GitHub to include the library:
 ```html
-<script src="https://raw.githubusercontent.com/LyubomirT/moveme.js/main/"></script>
+<script src="https://raw.githubusercontent.com/LyubomirT/moveme.js/main/lib/1.0.0/moveme.js"></script>
 ```
 ## Usage
 
