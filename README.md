@@ -1,7 +1,7 @@
 
 # MoveMe.js
 
-MoveMe.js is a lightweight JavaScript library for making DOM elements draggable on a webpage. It allows you to easily add drag-and-drop functionality to any element on your page with just a few lines of code.
+MoveMe.js is a lightweight JavaScript library for making DOM elements draggable. It allows you to easily add drag-and-drop functionality to any element on your page with just a few lines of code.
 
 ## Installation
 
