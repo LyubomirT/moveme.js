@@ -10,9 +10,9 @@ You can install MoveMe.js by downloading the `moveme.min.js` file from the `dist
 <script src="path/to/moveme.min.js"></script>
 ```
 
-Alternatively, you can use a CDN to include the library:
+Alternatively, you can use GitHub to include the library:
 ```html
-<script src="https://unpkg.com/moveme@1.0.0/dist/moveme.min.js"></script>
+<script src="https://raw.githubusercontent.com/LyubomirT/moveme.js/main/"></script>
 ```
 ## Usage
 
