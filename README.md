@@ -23,7 +23,7 @@ const element = document.getElementById('myElement');
 const draggable = new Draggable(element);
 ```
 
-You can also set additional options, such as a boundary element, step size, and transition duration:
+You can also set additional options, such as a boundary element, step size, and transition duration (smooth gliding):
 
 ```js
 draggable.setBoundaries(document.getElementById('boundaryElement'));
