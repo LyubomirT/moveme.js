@@ -79,3 +79,7 @@ MoveMe.js is licensed under the MIT License. See the [LICENSE](LICENSE) file for
 ## How does it work?
 
 If you aren't quite sure how does MoveMe.js work, you can simply check out the [preview](preview/preview.html)!
+
+## Thanks to:
+
+Itishi Yameha for the logo and the banner. Check out his discord! `Itishi Yameha#3002`
