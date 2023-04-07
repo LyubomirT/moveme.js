@@ -45,7 +45,7 @@ draggable.destroy();
 
 ## Docs
 
-Read more about the MoveMe.js documentation [here](https://lyubomirt.github.io/moveme.js/DOCS.md)
+Read more about the MoveMe.js documentation [here](DOCS.md)
 
 ## License
 
