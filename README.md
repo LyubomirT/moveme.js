@@ -42,35 +42,9 @@ To make an element non-draggable, use the `destroy()` method:
 draggable.destroy();
 ```
 
-## All options
+## Docs
 
-### `new Draggable(element)`
-
-Creates a new instance of the Draggable class for the given element.
-
-### `draggable.setBoundaries(boundaryElement)`
-
-Sets a boundary element that the draggable element cannot be dragged outside of.
-
-### `draggable.setStepSize(stepX, stepY)`
-
-Sets the step size for dragging on the x and y axes.
-
-### `draggable.setTransitionDuration(duration)`
-
-Sets the transition duration for the draggable element.
-
-### `draggable.enableDrag()`
-
-Enables dragging on the element.
-
-### `draggable.disableDrag()`
-
-Disables dragging on the element.
-
-### `draggable.destroy()`
-
-Makes an element non-draggable.
+Read more about the MoveMe.js documentation [here](https://lyubomirt.github.io/moveme.js/docs/DOCS.md)
 
 ## License
 
