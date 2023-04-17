@@ -13,7 +13,7 @@ You can install MoveMe.js by downloading the `moveme.min.js` file from the `dist
 
 Alternatively, you can use GitHub to include the library:
 ```html
-<script src="https://raw.githubusercontent.com/LyubomirT/moveme.js/main/lib/1.1.0/moveme.js"></script>
+<script src="https://LyubomirT.github.io/lib/1.1.0/script.js"></script>
 ```
 ## Usage
 
