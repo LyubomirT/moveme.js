@@ -46,48 +46,52 @@ class Draggable {
   }
 
   handleMouseMove(e) {
-    if (this.isDragging) {
-      const dx = e.clientX - this.initialX;
-      const dy = e.clientY - this.initialY;
-
-      const newX = Math.round(dx / this.stepX) * this.stepX;
-      const newY = Math.round(dy / this.stepY) * this.stepY;
-
-      if (this.boundaryElement) {
-        const boundaryRect = this.boundaryRect;
-        const elementRect = this.element.getBoundingClientRect();
-        const maxX = boundaryRect.right - elementRect.width;
-        const maxY = boundaryRect.bottom - elementRect.height;
-        this.currentX = Math.min(maxX, Math.max(0, newX));
-        this.currentY = Math.min(maxY, Math.max(0, newY));
-      } else {
-        this.currentX = newX;
-        this.currentY = newY;
+      if (this.isDragging) {
+        const dx = e.clientX - this.initialX;
+        const dy = e.clientY - this.initialY;
+    
+        const newX = Math.round(dx / this.stepX) * this.stepX;
+        const newY = Math.round(dy / this.stepY) * this.stepY;
+    
+        if (this.boundaryElement) {
+          const boundaryRect = this.boundaryRect;
+          const elementRect = this.element.getBoundingClientRect();
+    
+          // calculate maximum values for X and Y
+          const maxX = boundaryRect.right - elementRect.width;
+          const maxY = boundaryRect.bottom - elementRect.height;
+    
+          // update current X and Y positions based on boundaries
+          this.currentX = Math.min(maxX, Math.max(0, newX));
+          this.currentY = Math.min(maxY, Math.max(0, newY));
+        } else {
+          this.currentX = newX;
+          this.currentY = newY;
+        }
+    
+        this.xOffset = this.currentX;
+        this.yOffset = this.currentY;
+    
+        const distanceX = this.currentX - this.lastX;
+        const distanceY = this.currentY - this.lastY;
+    
+        // calculate time elapsed
+        const currentTime = Date.now();
+        const elapsedTime = currentTime - this.lastTime;
+    
+        // calculate velocity
+        this.velocityX = distanceX / elapsedTime;
+        this.velocityY = distanceY / elapsedTime;
+    
+        // store current position and time
+        this.lastX = this.currentX;
+        this.lastY = this.currentY;
+        this.lastTime = currentTime;
+    
+        // set translate and transition duration
+        this.setTranslate(this.currentX, this.currentY);
       }
-
-      this.xOffset = this.currentX;
-      this.yOffset = this.currentY;
-
-      const distanceX = this.currentX - this.lastX;
-      const distanceY = this.currentY - this.lastY;
-
-      // calculate time elapsed
-      const currentTime = Date.now();
-      const elapsedTime = currentTime - this.lastTime;
-
-      // calculate velocity
-      this.velocityX = distanceX / elapsedTime;
-      this.velocityY = distanceY / elapsedTime;
-
-      // store current position and time
-      this.lastX = this.currentX;
-      this.lastY = this.currentY;
-      this.lastTime = currentTime;
-
-      // set translate and transition duration
-      this.setTranslate(this.currentX, this.currentY);
-    }
-  }
+    }      
 
   handleMouseUp(e) {
     this.initialX = this.currentX;
